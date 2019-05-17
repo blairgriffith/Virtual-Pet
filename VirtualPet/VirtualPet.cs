@@ -4,7 +4,15 @@ using System.Text;
 
 namespace VirtualPet
 {
-    class Class1
+    class VirtualPet
     {
+        public string Name { get; set; }
+        public string Species { get; set; }
+
+        public VirtualPet(string name, string species)
+        {
+            Name = name;
+            Species = species;
+        }
     }
 }
