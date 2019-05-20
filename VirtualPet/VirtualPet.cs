@@ -36,6 +36,20 @@ namespace VirtualPet
             Hunger--;
             Console.WriteLine($"Your pet's hunger level is now {Hunger}");
         }
+
+        public void TakeToDoctor()
+        {
+            Health++;
+            Console.WriteLine($"Your pet's hunger level is now {Health}");
+        }
+
+        public void PlayWithPet()
+        {
+            Health++;
+            Hunger--;
+            Boredom--;
+            Console.WriteLine($"Your pet now has {Health} health, {Hunger} hunger, and {Boredom} boredom.");
+        }
        
     }
 }
