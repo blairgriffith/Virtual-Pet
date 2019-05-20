@@ -14,5 +14,9 @@ namespace VirtualPet
             Name = name;
             Species = species;
         }
+        public VirtualPet()
+        {
+
+        }
     }
 }
