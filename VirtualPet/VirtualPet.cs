@@ -12,17 +12,30 @@ namespace VirtualPet
         public string Name { get; set; }
         public string Species { get; set; }
 
-        public VirtualPet(string name, string species, int hunger, int boredom, int health)
+        public VirtualPet(string name, string species)
         {
             Name = name;
             Species = species;
-            Hunger = hunger;
-            Boredom = boredom;
-            Health = health;
+            Hunger = 5;
+            Boredom = 6;
+            Health = 7;
         }
-        public VirtualPet()
-        {
 
+        public void GetInfo()
+        {
+            Console.WriteLine($"Your {Species} is named {Name}");
         }
+
+        public void GetStatus()
+        {
+            Console.WriteLine($"{Name} has {Hunger} hunger, {Boredom} boredom, and {Health} health.");
+        }
+
+        public void FeedPet()
+        {
+            Hunger--;
+            Console.WriteLine($"Your pet's hunger level is now {Hunger}");
+        }
+       
     }
 }
