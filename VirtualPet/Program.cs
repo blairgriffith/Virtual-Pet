@@ -9,7 +9,7 @@ namespace VirtualPet
         static void Main(string[] args)
 
         {
-            VirtualPet first = new VirtualPet("", "");
+            VirtualPet first = new VirtualPet("", "", 5,6,7);
             VirtualPet second = new VirtualPet();
             string response = "";
             bool whilePlayingGame = true;
@@ -29,14 +29,19 @@ namespace VirtualPet
                         first.Name = Console.ReadLine();
                         Console.WriteLine($"{first.Name} is a great name! What species is {first.Name}?");
                         first.Species = Console.ReadLine();
-                        Console.WriteLine("Type \"pet info\" to view the status of your pet");
+                        Console.WriteLine("Type \"pet info\" to view the name and species of your pet \nor type \"pet status\" to view levels");
                         response = Console.ReadLine().ToLower();
                         switch (response)
                         {
                             case "pet info":
                                 Console.WriteLine($"My name is {first.Name} and I am a {first.Species}.");
                                 break;
+
+                            case "pet status":
+                                Console.WriteLine($" I have {first.Hunger} and I have {first.Boredom} and I have {first.Health}");
+                                break;
                             default:
+                         
                                 Console.WriteLine("command not recognized");
                                 break;
                         }
