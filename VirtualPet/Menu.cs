@@ -7,10 +7,12 @@ namespace VirtualPet
     class Menu
     {
         string response = "";
+        bool playingGame = true;
 
         VirtualPet first = new VirtualPet("", "");
         public void StartMenu()
         {
+
                 Console.WriteLine("Please choose one of the following menu options.");
                 Console.WriteLine("Type play or exit");
                 response = Console.ReadLine().ToLower();
@@ -26,32 +28,53 @@ namespace VirtualPet
                         break;
                     case "exit":
                         Console.WriteLine("Thank you for playing!");
+                        playingGame = false;
                         break;
                     default:
                         Console.WriteLine("command not recognized");
-                    break;
+                        break;
 
                 }
         }
         public void GameplayMenu()
         {
-            
-            switch (response)
+                Console.WriteLine("\nPlease type one of the following menu options:" +
+                    "\npet info - displays pet name and species" +
+                    "\npet status - displays pet hunger, boredom, and health" +
+                    "\nfeed pet - feeds pet, decreasing hunger" +
+                    "\ndoctor visit - takes pet to doctor, increasing health" +
+                    "\nexercise - play with your pet, increasing health, decreasing boredom," +
+                    "\nand increasing hunger" +
+                    "\nexit - exits the game\n");
+            do
             {
-                case "pet info":
-                    first.GetInfo();
-                    break;
-                case "pet status":
-                    first.GetStatus();
-                    break;
-                case "feed pet":
-                    first.FeedPet();
-                  
-                    break;
-                default:
-                    Console.WriteLine("command not recognized");
-                    break;
-            }
+                response = Console.ReadLine();
+                switch (response)
+                {
+                    case "pet info":
+                        first.GetInfo();
+                        break;
+                    case "pet status":
+                        first.GetStatus();
+                        break;
+                    case "feed pet":
+                        first.FeedPet();
+                        break;
+                    case "doctor visit":
+                        first.TakeToDoctor();
+                        break;
+                    case "exercise":
+                        first.PlayWithPet();
+                        break;
+                    case "exit":
+                        playingGame = false;
+                        break;
+                    default:
+                        Console.WriteLine("command not recognized");
+                        break;
+                }
+
+            } while (playingGame);
         }
     }
 }

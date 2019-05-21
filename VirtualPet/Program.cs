@@ -12,8 +12,8 @@ namespace VirtualPet
             Menu ProgramMenu = new Menu();
             VirtualPet first = new VirtualPet("", "");
             string response = "";
-            bool whilePlayingGame = true;
-
+            bool playingGame = true;
+        
             ProgramMenu.StartMenu();
 
 
