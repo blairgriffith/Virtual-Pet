@@ -6,11 +6,11 @@ namespace VirtualPet
 {
     class Menu
     {
+        string response = "";
+
         VirtualPet first = new VirtualPet("", "");
         public void StartMenu()
         {
-            string response = "";
-
                 Console.WriteLine("Please choose one of the following menu options.");
                 Console.WriteLine("Type play or exit");
                 response = Console.ReadLine().ToLower();
@@ -27,6 +27,10 @@ namespace VirtualPet
                     case "exit":
                         Console.WriteLine("Thank you for playing!");
                         break;
+                    default:
+                        Console.WriteLine("command not recognized");
+                    break;
+
                 }
         }
         public void GameplayMenu()
@@ -35,14 +39,14 @@ namespace VirtualPet
             switch (response)
             {
                 case "pet info":
-                    GetInfo();
+                    first.GetInfo();
                     break;
                 case "pet status":
-                    VirtualPet.GetStatus();
+                    first.GetStatus();
                     break;
                 case "feed pet":
-                    VirtualPet.FeedPet();
-                    Console.WriteLine($"Your pet's hunger level is now {Hunger}");
+                    first.FeedPet();
+                  
                     break;
                 default:
                     Console.WriteLine("command not recognized");

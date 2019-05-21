@@ -14,6 +14,10 @@ namespace VirtualPet
             string response = "";
             bool whilePlayingGame = true;
 
+            ProgramMenu.StartMenu();
+
+
+
 
            
 
