@@ -20,7 +20,7 @@ namespace VirtualPet
                 switch (response)
                 {
                     case "play":
-                        Console.WriteLine("Let's name your first pet.");
+                        Console.WriteLine("Let's name the first pet in your shelter. What would you like to name your pet?");
                         first.Name = Console.ReadLine();
                         Console.WriteLine($"{first.Name} is a great name! What species is {first.Name}?");
                         first.Species = Console.ReadLine();
@@ -39,7 +39,7 @@ namespace VirtualPet
         public void GameplayMenu()
         {
                 Console.WriteLine("\nPlease type one of the following menu options:" +
-                    "\npet info - displays pet name and species" +
+                    "\npet info - displays species and pet name" +
                     "\npet status - displays pet hunger, boredom, and health" +
                     "\nfeed pet - feeds pet, decreasing hunger" +
                     "\ndoctor visit - takes pet to doctor, increasing health" +

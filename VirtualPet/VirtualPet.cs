@@ -34,13 +34,13 @@ namespace VirtualPet
         public void FeedPet()
         {
             Hunger--;
-            Console.WriteLine($"Your pet's hunger level is now {Hunger}");
+            Console.WriteLine($"{Name}'s hunger level is now {Hunger}");
         }
 
         public void TakeToDoctor()
         {
             Health++;
-            Console.WriteLine($"Your pet's hunger level is now {Health}");
+            Console.WriteLine($"{Name}'s health level is now {Health}");
         }
 
         public void PlayWithPet()
@@ -48,7 +48,7 @@ namespace VirtualPet
             Health++;
             Hunger--;
             Boredom--;
-            Console.WriteLine($"Your pet now has {Health} health, {Hunger} hunger, and {Boredom} boredom.");
+            Console.WriteLine($"{Name} now has {Health} health, {Hunger} hunger, and {Boredom} boredom.");
         }
        
     }

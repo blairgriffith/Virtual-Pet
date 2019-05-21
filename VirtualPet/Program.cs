@@ -10,19 +10,8 @@ namespace VirtualPet
 
         {
             Menu ProgramMenu = new Menu();
-            VirtualPet first = new VirtualPet("", "");
-            string response = "";
-            bool playingGame = true;
-        
             ProgramMenu.StartMenu();
 
-
-
-
-           
-
-
-            
         }
     }
 }
