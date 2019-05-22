@@ -11,7 +11,6 @@ namespace VirtualPet
         {
             Menu ProgramMenu = new Menu();
             ProgramMenu.StartMenu();
-
         }
     }
 }

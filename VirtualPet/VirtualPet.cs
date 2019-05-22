@@ -26,10 +26,20 @@ namespace VirtualPet
             Console.WriteLine($"Your {Species} is named {Name}");
         }
 
+        //public void GetInfoAll()
+        //{
+
+        //}
+
         public void GetStatus()
         {
             Console.WriteLine($"{Name} has {Hunger} hunger, {Boredom} boredom, and {Health} health.");
         }
+
+        //public void GetStatusAll()
+        //{
+
+        //}
 
         public void FeedPet()
         {
@@ -37,11 +47,21 @@ namespace VirtualPet
             Console.WriteLine($"{Name}'s hunger level is now {Hunger}");
         }
 
+        //public void FeedAll()
+        //{
+
+        //}
+
         public void TakeToDoctor()
         {
             Health++;
             Console.WriteLine($"{Name}'s health level is now {Health}");
         }
+
+        //public void TakeToDoctorAll()
+        //{
+
+        //}
 
         public void PlayWithPet()
         {
@@ -50,6 +70,11 @@ namespace VirtualPet
             Boredom--;
             Console.WriteLine($"{Name} now has {Health} health, {Hunger} hunger, and {Boredom} boredom.");
         }
+
+        //public void PlayWithAll()
+        //{
+
+        //}
        
     }
 }
