@@ -21,6 +21,15 @@ namespace VirtualPet
             Health = 7;
         }
 
+        public void AddPet()
+        {
+
+                    Console.WriteLine("Let's name the new pet in your shelter. What would you like to name your pet?");
+                    (this.Name) = Console.ReadLine();
+                    Console.WriteLine($"{this.Name} is a great name! What species is {this.Name}?");
+                    this.Species = Console.ReadLine();
+        }
+
         public void GetInfo()
         {
             Console.WriteLine($"Your {Species} is named {Name}");
