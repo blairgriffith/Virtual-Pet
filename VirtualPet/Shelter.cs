@@ -10,7 +10,7 @@ namespace VirtualPet
         VirtualPet shelterPet = new VirtualPet("", "");
         List<VirtualPet> listOfPets = new List<VirtualPet> ();
         string response = ("");
-
+        bool playingGame = true;
         public void AddPet()
         {
             Console.WriteLine("Welcome to Virtual Pet!! Type play or exit");
