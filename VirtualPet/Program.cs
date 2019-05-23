@@ -11,7 +11,7 @@ namespace VirtualPet
         {
             Shelter ProgramShelter = new Shelter();
             Menu ProgramMenu = new Menu();
-            ProgramShelter.AddPet();
+            ProgramShelter.AddPetToShelter();
         }
     }
 }
