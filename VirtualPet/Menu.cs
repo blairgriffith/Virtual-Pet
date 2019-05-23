@@ -17,24 +17,24 @@ namespace VirtualPet
                 Console.WriteLine("Type play or exit");
                 response = Console.ReadLine().ToLower();
 
-                switch (response)
-                {
-                    case "play":
-                        Console.WriteLine("Let's name the first pet in your shelter. What would you like to name your pet?");
-                        first.Name = Console.ReadLine();
-                        Console.WriteLine($"{first.Name} is a great name! What species is {first.Name}?");
-                        first.Species = Console.ReadLine();
-                        GameplayMenu();
-                        break;
-                    case "exit":
-                        Console.WriteLine("Thank you for playing!");
-                        playingGame = false;
-                        break;
-                    default:
-                        Console.WriteLine("command not recognized");
-                        break;
+              ////  switch (response)
+              //  {
+              //      case "play":
+              //          Console.WriteLine("Let's name the first pet in your shelter. What would you like to name your pet?");
+              //          first.Name = Console.ReadLine();
+              //          Console.WriteLine($"{first.Name} is a great name! What species is {first.Name}?");
+              //          first.Species = Console.ReadLine();
+              //          GameplayMenu();
+              //          break;
+              //      case "exit":
+              //          Console.WriteLine("Thank you for playing!");
+              //          playingGame = false;
+              //          break;
+              //      default:
+              //          Console.WriteLine("command not recognized");
+              //          break;
 
-                }
+              //  }
         }
         public void GameplayMenu()
         {
@@ -77,7 +77,7 @@ namespace VirtualPet
             } while (playingGame);
 
 
-            //Testing 123
+            
         }
     }
 }
