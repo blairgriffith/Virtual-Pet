@@ -14,12 +14,20 @@ namespace VirtualPet
 
         public void AddPetToShelter()
         {
-
-
+            shelterPet.AddPet();
+            listOfPets.Add(shelterPet);
+            
         }
 
         public void ListPets()
         {
+            Console.WriteLine("|Name        | Hunger | Boredom  | Health |");
+            Console.WriteLine("|------------|--------|----------|--------|");
+
+            foreach(var shelterPet in listOfPets)
+            {
+                Console.WriteLine($"{shelterPet.Name} {shelterPet.Hunger} {shelterPet.Boredom} {shelterPet.Health}");
+            }
 
         }
 
