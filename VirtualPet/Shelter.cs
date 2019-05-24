@@ -13,7 +13,6 @@ namespace VirtualPet
         {
             shelterPet.AddPet();
             listOfPets.Add(shelterPet);
-            
         }
 
         public void ListPets()
