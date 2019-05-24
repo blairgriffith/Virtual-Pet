@@ -12,8 +12,6 @@ namespace VirtualPet
         public string Name { get; set; }
         public string Species { get; set; }
 
-     
-
         public VirtualPet(string name, string species)
         {
             Name = name;
@@ -51,16 +49,17 @@ namespace VirtualPet
         //{
 
         //}
-        
+
         public void FeedPet()
         {
-            Console.WriteLine("Select a pet to feed");
-            int selection = Convert.ToInt32(Console.ReadLine());
             Hunger--;
             Console.WriteLine($"{Name}'s hunger level is now {Hunger}");
         }
 
-   
+        //public void FeedAll()
+        //{
+
+        //}
 
         public void TakeToDoctor()
         {

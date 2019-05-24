@@ -23,6 +23,7 @@ namespace VirtualPet
                     "\nPet Info - displays species and pet name\n" +
                     "\nPet Status - displays pet hunger, boredom, and health\n" +
                     "\nFeed Pet - feeds pet, decreasing hunger\n" +
+                    "\nFeed All - feed all pets\n" + 
                     "\nDoctor Visit - takes pet to doctor, increasing health\n" +
                     "\nExercise - play with your pet, increasing health, decreasing boredom, and" +
                     "\nincreasing hunger\n" +
@@ -33,7 +34,6 @@ namespace VirtualPet
                 {
                     case "add pet":
                         shelter.AddPetToShelter();
-                        Console.Clear();
                         break;
                     case "list pets":
                         shelter.ListPets();
@@ -46,6 +46,9 @@ namespace VirtualPet
                         break;
                     case "feed pet":
                         first.FeedPet();
+                        break;
+                    case "feed all":
+                        shelter.FeedAll();
                         break;
                     case "doctor visit":
                         first.TakeToDoctor();
