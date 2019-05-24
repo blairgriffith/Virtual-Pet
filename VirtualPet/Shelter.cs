@@ -6,11 +6,8 @@ namespace VirtualPet
 {
     class Shelter
     {
-        Menu menuShelter = new Menu();
         VirtualPet shelterPet = new VirtualPet("", "");
         List<VirtualPet> listOfPets = new List<VirtualPet>();
-        string response = ("");
-        bool playingGame = true;
 
         public void AddPetToShelter()
         {
@@ -26,7 +23,7 @@ namespace VirtualPet
 
             foreach(var shelterPet in listOfPets)
             {
-                Console.WriteLine($"{shelterPet.Name} {shelterPet.Hunger} {shelterPet.Boredom} {shelterPet.Health}");
+                Console.WriteLine($"| {shelterPet.Name} | {shelterPet.Hunger} | {shelterPet.Boredom} | {shelterPet.Health}|");
             }
 
         }

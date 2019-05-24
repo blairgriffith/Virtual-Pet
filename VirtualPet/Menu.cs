@@ -10,40 +10,34 @@ namespace VirtualPet
         bool playingGame = true;
 
         VirtualPet first = new VirtualPet("", "");
-        public void AddPet()
-        {
-            Console.WriteLine("Welcome to Virtual Pet!! Type play or exit");
-            Console.ReadLine();
-
-            switch (response)
-            {
-                case "play":
-                    break;
-                case "exit":
-                    Console.WriteLine("Thank you for playing!");
-                    playingGame = false;
-                    break;
-                default:
-                    Console.WriteLine("command not recognized");
-                    break;
-            }
-        }
+        Shelter shelter = new Shelter();
 
         public void GameplayMenu()
         {
-                Console.WriteLine("\nPlease type one of the following menu options:" +
-                    "\npet info - displays species and pet name" +
-                    "\npet status - displays pet hunger, boredom, and health" +
-                    "\nfeed pet - feeds pet, decreasing hunger" +
-                    "\ndoctor visit - takes pet to doctor, increasing health" +
-                    "\nexercise - play with your pet, increasing health, decreasing boredom," +
-                    "\nand increasing hunger" +
-                    "\nexit - exits the game\n");
             do
             {
-                response = Console.ReadLine();
+                Console.WriteLine("Welcome to Virtual Pet!!\n");
+                Console.WriteLine("\nPlease type one of the following menu options:\n" +
+                    "\nAdd Pet - add a new pet to the shelter\n" +
+                    "\nList Pets - shows a list of all pets and their statuses\n" +
+                    "\nPet Info - displays species and pet name\n" +
+                    "\nPet Status - displays pet hunger, boredom, and health\n" +
+                    "\nFeed Pet - feeds pet, decreasing hunger\n" +
+                    "\nDoctor Visit - takes pet to doctor, increasing health\n" +
+                    "\nExercise - play with your pet, increasing health, decreasing boredom, and" +
+                    "\nincreasing hunger\n" +
+                    "\nExit - exits the game\n");
+
+                response = Console.ReadLine().ToLower();
                 switch (response)
                 {
+                    case "add pet":
+                        shelter.AddPetToShelter();
+                        Console.Clear();
+                        break;
+                    case "list pets":
+                        shelter.ListPets();
+                        break;
                     case "pet info":
                         first.GetInfo();
                         break;

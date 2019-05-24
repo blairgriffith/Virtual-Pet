@@ -9,10 +9,8 @@ namespace VirtualPet
         static void Main(string[] args)
 
         {
-            Shelter ProgramShelter = new Shelter();
             Menu ProgramMenu = new Menu();
-            ProgramShelter.AddPetToShelter();
-            
+            ProgramMenu.GameplayMenu();
                 
             
                 
