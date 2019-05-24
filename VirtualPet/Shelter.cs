@@ -33,7 +33,7 @@ namespace VirtualPet
         {
             foreach (var pet in listOfPets)
             {
-                shelterPet.FeedPet();
+                pet.FeedPet();
             }
 
         }
