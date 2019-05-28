@@ -37,9 +37,12 @@ namespace VirtualPet
                 i = i + 1;
                 Console.WriteLine($"{i}. {pet.Name}");
             }
-
-            Console.ReadLine();
-
+            int choice = Convert.ToInt32(Console.ReadLine());
+            choice--;
+            Console.WriteLine($"{listOfPets[choice].Name}");
+                
+            
+            Console.WriteLine($"You have chosen {listOfPets[choice].Name}");
         }
 
 

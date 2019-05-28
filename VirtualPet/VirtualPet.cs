@@ -12,7 +12,7 @@ namespace VirtualPet
         public string Name { get; set; }
         public string Species { get; set; }
 
-     
+            
 
         public VirtualPet(string name, string species)
         {
@@ -54,6 +54,7 @@ namespace VirtualPet
         
         public void FeedPet()
         {
+           
             Hunger--;
             Console.WriteLine($"{Name}'s hunger level is now {Hunger}");
         }
