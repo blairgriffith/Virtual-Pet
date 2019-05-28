@@ -19,14 +19,13 @@ namespace VirtualPet
                 Console.WriteLine("Welcome to Virtual Pet!!\n");
                 Console.WriteLine("\nPlease type one of the following menu options:\n" +
                     "\nAdd Pet - add a new pet to the shelter\n" +
-                    "\nList Pets - shows a list of all pets and their statuses\n" +
-                    "\nPet Info - displays species and pet name\n" +
-                    "\nPet Status - displays pet hunger, boredom, and health\n" +
+                    "\nPet Status - displays all pets' names species and stats\n" +
                     "\nFeed Pet - feeds pet, decreasing hunger\n" +
-                    "\nFeed All - feed all pets\n" + 
-                    "\nDoctor Visit - takes pet to doctor, increasing health\n" +
-                    "\nExercise - play with your pet, increasing health, decreasing boredom, and" +
-                    "\nincreasing hunger\n" +
+                    "\n    Feed All - feed all pets\n" + 
+                    "\nTake to Doctor - increasing health\n" +
+                    "\n    Take all to Doctor - same as above for all pets\n" +
+                    "\nExercise -increasing health, decreasing boredom, and increasing hunger\n" +
+                    "\n    Exercise All - same as above for all pets\n" +
                     "\nExit - exits the game\n");
 
                 response = Console.ReadLine().ToLower();
@@ -35,26 +34,29 @@ namespace VirtualPet
                     case "add pet":
                         shelter.AddPetToShelter();
                         break;
-                    case "list pets":
-                        shelter.ListPets();
-                        break;
-                    case "pet info":
-                        first.GetInfo();
-                        break;
                     case "pet status":
-                        first.GetStatus();
+                        shelter.GetStatus();
                         break;
                     case "feed pet":
+                        shelter.ChoosePet();
                         first.FeedPet();
                         break;
                     case "feed all":
                         shelter.FeedAll();
                         break;
-                    case "doctor visit":
+                    case "take to doctor":
+                        shelter.ChoosePet();
                         first.TakeToDoctor();
                         break;
+                    case "take all to doctor":
+                        shelter.TakeToDoctorAll();
+                        break;
                     case "exercise":
-                        first.PlayWithPet();
+                        shelter.ChoosePet();
+                        first.Exercise();
+                        break;
+                    case "exercise all":
+                        shelter.ExerciseAll();
                         break;
                     case "exit":
                         playingGame = false;

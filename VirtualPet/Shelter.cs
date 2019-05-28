@@ -17,7 +17,7 @@ namespace VirtualPet
             
         }
 
-        public void ListPets()
+        public void GetStatus()
         {
             Console.WriteLine("|Name        | Hunger | Boredom  | Health |");
             Console.WriteLine("|------------|--------|----------|--------|");
@@ -29,6 +29,20 @@ namespace VirtualPet
             }
 
         }
+        public void ChoosePet()
+        {
+            int i = 0;
+            foreach (var pet in listOfPets)
+            {
+                i = i + 1;
+                Console.WriteLine($"{i}. {pet.Name}");
+            }
+
+            Console.ReadLine();
+
+        }
+
+
         public void FeedAll()
         {
             foreach (var pet in listOfPets)
@@ -37,6 +51,28 @@ namespace VirtualPet
             }
 
         }
+        public void TakeToDoctorAll()
+        { foreach (var pet in listOfPets)
+                pet.TakeToDoctor();
+
+        }
+        public void ExerciseAll()
+        {
+            foreach (var pet in listOfPets)
+                pet.Exercise();
+        }
+        public void GetStatusAll()
+        {
+            foreach (var pet in listOfPets)
+                pet.GetStatus();
+        }
+        public void GetInfoAll()
+        {
+            foreach (var pet in listOfPets)
+                pet.GetInfo();
+        }
+
     }
+
 
 }

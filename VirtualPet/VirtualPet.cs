@@ -71,10 +71,10 @@ namespace VirtualPet
 
         //}
 
-        public void PlayWithPet()
+        public void Exercise()
         {
             Health++;
-            Hunger--;
+            Hunger++;
             Boredom--;
             Console.WriteLine($"{Name} now has {Health} health, {Hunger} hunger, and {Boredom} boredom.");
         }
