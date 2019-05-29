@@ -9,7 +9,7 @@ namespace VirtualPet
         string response = "";
         bool playingGame = true;
 
-        VirtualPet first = new VirtualPet("", "");
+        VirtualPet first = new VirtualPet();
         Shelter shelter = new Shelter();
 
         public void GameplayMenu()

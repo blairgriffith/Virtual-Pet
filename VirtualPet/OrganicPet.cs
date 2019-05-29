@@ -4,18 +4,14 @@ using System.Text;
 
 namespace VirtualPet
 {
-    public class VirtualPet
+    public class VirtualPet : Pet
     {
         public int Hunger { get; set; }
         public int Boredom { get; set; }
         public int Health { get; set; }
-        public string Name { get; set; }
-        public string Species { get; set; }
-
-        public VirtualPet(string name, string species)
-        {
-            Name = name;
-            Species = species;
+          
+        public VirtualPet() : base("","")
+        {                      
             Hunger = 5;
             Boredom = 6;
             Health = 7;

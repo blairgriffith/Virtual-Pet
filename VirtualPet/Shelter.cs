@@ -6,7 +6,7 @@ namespace VirtualPet
 {
     class Shelter
     {
-        VirtualPet shelterPet = new VirtualPet("", "");
+        VirtualPet shelterPet = new VirtualPet();
         public List<VirtualPet> listOfPets = new List<VirtualPet>();
         int choice;
 
@@ -14,7 +14,7 @@ namespace VirtualPet
         {
             shelterPet.AddPet();
             listOfPets.Add(shelterPet);
-            shelterPet = new VirtualPet("","");
+            shelterPet = new VirtualPet();
             
         }
 
