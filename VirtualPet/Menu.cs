@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VirtualPet
+namespace OrganicPet
 {
     class Menu
     {
         string response = "";
         bool playingGame = true;
 
-        VirtualPet first = new VirtualPet();
+        OrganicPet first = new OrganicPet();
         Shelter shelter = new Shelter();
 
         public void GameplayMenu()

@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace VirtualPet
+namespace OrganicPet
 {
     class Shelter
     {
-        VirtualPet shelterPet = new VirtualPet();
-        public List<VirtualPet> listOfPets = new List<VirtualPet>();
+        Pet shelterPet = new Pet("","");
+        public List<Pet> listOfPets = new List<Pet>();
         int choice;
 
         public void AddPetToShelter()
         {
             shelterPet.AddPet();
             listOfPets.Add(shelterPet);
-            shelterPet = new VirtualPet();
+            shelterPet = new Pet("","");
             
         }
 

@@ -1,6 +1,6 @@
 ﻿using System; 
 
-namespace VirtualPet
+namespace OrganicPet
 {
    
     class Program
