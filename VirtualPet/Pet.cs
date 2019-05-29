@@ -8,18 +8,13 @@ namespace OrganicPet
     {
         public string Name { get; set; }
         public string Species { get; set; }
-        public int Hunger { get; set; }
         public int Boredom { get; set; }
-        public int Health { get; set; }
 
         public Pet(string name, string species)
         {
             Name = name;
             Species = species;
-            Hunger = 6;
             Boredom = 7;
-            Health = 8;
-                             
         }
 
         public Pet AddPet()

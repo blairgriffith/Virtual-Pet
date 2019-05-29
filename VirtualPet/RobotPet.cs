@@ -7,13 +7,14 @@ namespace OrganicPet
     class RobotPet : Pet 
 
     {
-  
+        public int Oil { get; set; }
+        public int Performance { get; set; }
 
-    public RobotPet() : base("", "")
-    {
-
-
-    }
+        public RobotPet(int oil, int performance) : base("", "")
+        {
+            Oil = oil;
+            Performance = performance;
+        }
 
 
     }

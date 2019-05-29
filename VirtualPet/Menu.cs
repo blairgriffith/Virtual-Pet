@@ -9,7 +9,8 @@ namespace OrganicPet
         string response = "";
         bool playingGame = true;
 
-        OrganicPet first = new OrganicPet();
+        OrganicPet organicPet = new OrganicPet();
+        RobotPet robotPet = new RobotPet();
         Shelter shelter = new Shelter();
 
         public void GameplayMenu()
