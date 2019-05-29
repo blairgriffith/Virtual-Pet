@@ -14,9 +14,9 @@ namespace VirtualPet
 
         public void GameplayMenu()
         {
+            Console.WriteLine("Welcome to Virtual Pet!!\n");
             do
             {
-                Console.WriteLine("Welcome to Virtual Pet!!\n");
                 Console.WriteLine("\nPlease type one of the following menu options:\n" +
                     "\nAdd Pet - add a new pet to the shelter\n" +
                     "\nPet Status - displays all pets' names species and stats\n" +
@@ -35,25 +35,25 @@ namespace VirtualPet
                         shelter.AddPetToShelter();
                         break;
                     case "pet status":
-                        shelter.GetStatus();
+                        shelter.GetStatusAll();
                         break;
                     case "feed pet":
                         shelter.ChoosePet();
-                        first.FeedPet();
+                        shelter.FeedPet();
                         break;
                     case "feed all":
                         shelter.FeedAll();
                         break;
                     case "take to doctor":
                         shelter.ChoosePet();
-                        first.TakeToDoctor();
+                        shelter.TakeToDoctor();
                         break;
                     case "take all to doctor":
                         shelter.TakeToDoctorAll();
                         break;
                     case "exercise":
                         shelter.ChoosePet();
-                        first.Exercise();
+                        shelter.Exercise();
                         break;
                     case "exercise all":
                         shelter.ExerciseAll();
@@ -65,11 +65,8 @@ namespace VirtualPet
                         Console.WriteLine("command not recognized");
                         break;
                 }
-
             } while (playingGame);
 
-
-            
         }
     }
 }
