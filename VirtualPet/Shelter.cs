@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OrganicPet
 {
-    class Shelter
+    public class Shelter
     {
         //OrganicPet organicPet = new OrganicPet();
         //RobotPet robotPet = new RobotPet();

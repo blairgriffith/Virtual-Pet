@@ -16,7 +16,7 @@ namespace OrganicPet
             Health = 6;
         }
 
-        public OrganicPet ChoosePet()
+        public OrganicPet ChoosePet(Shelter shelter)
         {
             int i = 0;
             foreach (var pet in shelter.listOfOrganicPets)
@@ -31,29 +31,23 @@ namespace OrganicPet
         }
 
         //single organic pet methods
-        public override void FeedPet()
+        public void FeedPet(OrganicPet organicPet)
         {
-            ChoosePet();
-
-            ChoosePet().Hunger--;
-            Console.WriteLine($"{ChoosePet().Name}'s hunger level is now {ChoosePet().Hunger}");
+            organicPet.Hunger--;
+            Console.WriteLine($"{organicPet.Name}'s hunger level is now {organicPet.Hunger}");
         }
-        public override void TakeToDoctor()
+        public void TakeToDoctor(OrganicPet organicPet)
         {
-            ChoosePet();
-
-            ChoosePet().Health++;
-            Console.WriteLine($"{ChoosePet().Name}'s health level is now {ChoosePet().Health}");
+            organicPet.Health++;
+            Console.WriteLine($"{organicPet.Name}'s health level is now {organicPet.Health}");
         }
-        public override void Exercise()
+        public void Exercise(OrganicPet organicPet)
         {
-            ChoosePet();
-
-            ChoosePet().Health++;
-            ChoosePet().Hunger++;
-            ChoosePet().Boredom--;
-            Console.WriteLine($"{ChoosePet().Name} now has {ChoosePet().Health} health, {ChoosePet().Hunger} hunger," +
-                $" and {ChoosePet().Boredom} boredom.");
+            organicPet.Health++;
+            organicPet.Hunger++;
+            organicPet.Boredom--;
+            Console.WriteLine($"{organicPet.Name} now has {organicPet.Health} health, {organicPet.Hunger} hunger," +
+                $" and {organicPet.Boredom} boredom.");
         }
         
         //all organic pet methods

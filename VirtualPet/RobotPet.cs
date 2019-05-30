@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OrganicPet
 {
-    class RobotPet : Pet 
+    public class RobotPet : Pet 
 
     {
         public int Oil { get; set; }
@@ -17,7 +17,7 @@ namespace OrganicPet
             Performance = 10;
         }
 
-        public RobotPet ChoosePet()
+        public RobotPet ChoosePet(Shelter shelter)
         {
             int i = 0;
             foreach (var pet in shelter.listOfRobotPets)
@@ -32,29 +32,23 @@ namespace OrganicPet
         }
 
         //single robot pet methods
-        public override void FeedPet()
+        public void FeedPet(RobotPet robotPet)
         {
-            ChoosePet();
-
-            ChoosePet().Oil++;
-            Console.WriteLine($"{ChoosePet().Name}'s oil level is now {ChoosePet().Oil}");
+            robotPet.Oil++;
+            Console.WriteLine($"{robotPet.Name}'s oil level is now {robotPet.Oil}");
         }
-        public override void TakeToDoctor()
+        public void TakeToDoctor(RobotPet robotPet)
         {
-            ChoosePet();
-
-            ChoosePet().Performance++;
-            Console.WriteLine($"{ChoosePet().Name}'s performance level is now {ChoosePet().Performance}");
+            robotPet.Performance++;
+            Console.WriteLine($"{robotPet.Name}'s performance level is now {robotPet.Performance}");
         }
-        public override void Exercise()
+        public void Exercise(RobotPet robotPet)
         {
-            ChoosePet();
-
-            ChoosePet().Performance++;
-            ChoosePet().Oil--;
-            ChoosePet().Boredom--;
-            Console.WriteLine($"{ChoosePet().Name} now has {ChoosePet().Performance} performance, {ChoosePet().Oil} oil," +
-                $" and {ChoosePet().Boredom} boredom.");
+            robotPet.Performance++;
+            robotPet.Oil--;
+            robotPet.Boredom--;
+            Console.WriteLine($"{robotPet.Name} now has {robotPet.Performance} performance, {robotPet.Oil} oil," +
+                $" and {robotPet.Boredom} boredom.");
         }
 
         //all robot pet methods

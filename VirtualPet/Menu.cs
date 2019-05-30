@@ -33,7 +33,6 @@ namespace OrganicPet
                 switch (response)
                 {
                     case "add pet":
-                        pet.ChoosePetType();
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
@@ -50,19 +49,20 @@ namespace OrganicPet
                         shelter.GetStatusAll();
                         break;
                     case "feed pet":
-                        pet.ChoosePetType();
                         switch (pet.ChoosePetType())
                         {
+                            //robo pet equals choose pet w the shelter
                             case "robot":
-                                robotPet.FeedPet();
+                                robotPet = robotPet.ChoosePet(shelter);
+                                robotPet.FeedPet(robotPet);
                                 break;
                             case "organic":
-                                organicPet.FeedPet();
+                                organicPet = organicPet.ChoosePet(shelter);
+                                organicPet.FeedPet(organicPet);
                                 break;
                         }
                         break;
                     case "feed all":
-                        pet.ChoosePetType();
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
@@ -74,19 +74,19 @@ namespace OrganicPet
                         }
                         break;
                     case "take to doctor":
-                        pet.ChoosePetType();
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
-                                robotPet.TakeToDoctor();
+                                robotPet = robotPet.ChoosePet(shelter);
+                                robotPet.TakeToDoctor(robotPet);
                                 break;
                             case "organic":
-                                organicPet.TakeToDoctor();
+                                organicPet = organicPet.ChoosePet(shelter);
+                                organicPet.TakeToDoctor(organicPet);
                                 break;
                         }
                         break;
                     case "take all to doctor":
-                        pet.ChoosePetType();
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
@@ -98,19 +98,19 @@ namespace OrganicPet
                         }
                         break;
                     case "exercise":
-                        pet.ChoosePetType();
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
-                                robotPet.Exercise();
+                                robotPet = robotPet.ChoosePet(shelter);
+                                robotPet.Exercise(robotPet);
                                 break;
                             case "organic":
-                                organicPet.Exercise();
+                                organicPet = organicPet.ChoosePet(shelter);
+                                organicPet.Exercise(organicPet);
                                 break;
                         }
                         break;
                     case "exercise all":
-                        pet.ChoosePetType();
                         switch (pet.ChoosePetType())
                         {
                             case "robot":

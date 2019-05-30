@@ -27,7 +27,6 @@ namespace OrganicPet
 
         public Pet AddPet()
         {
-            ChoosePetType();
             Console.WriteLine("Let's name the new pet in your shelter. What would you like to name your pet?");
             (this.Name) = Console.ReadLine();
             Console.WriteLine($"{this.Name} is a great name! What species is {this.Name}?");
@@ -35,21 +34,7 @@ namespace OrganicPet
             return this;
         }
 
-        public virtual void FeedPet()
-        {
-            ChoosePetType();
-        }
 
 
-        public virtual void TakeToDoctor()
-        {
-            ChoosePetType();
-        }
-
-
-        public virtual void Exercise()
-        {
-            ChoosePetType();
-        }
     }
 }
