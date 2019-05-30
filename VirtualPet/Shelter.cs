@@ -6,11 +6,9 @@ namespace OrganicPet
 {
     public class Shelter
     {
-        //OrganicPet organicPet = new OrganicPet();
-        //RobotPet robotPet = new RobotPet();
         public List<OrganicPet> listOfOrganicPets = new List<OrganicPet>();
         public List<RobotPet> listOfRobotPets = new List<RobotPet>();
-        int choice;
+        
 
         
         //add pets to appropriate lists
@@ -42,5 +40,30 @@ namespace OrganicPet
             }
         }
 
+        public void Tick()
+        {
+            foreach (var pet in listOfOrganicPets)
+            {
+                pet.Boredom++;
+                pet.Hunger++;
+                pet.Health--;
+            }
+            foreach (var pet in listOfRobotPets)
+            {
+                pet.Oil++;
+                pet.Performance--;
+                pet.Boredom++;
+            }
+        }
+
+        public void AdoptOrganic(OrganicPet organicPet)
+        {
+            listOfOrganicPets.Remove(organicPet);
+        }
+        public void AdoptRobot(RobotPet robotPet)
+        {
+            listOfRobotPets.Remove(robotPet);
+        }
+        
     }
 }

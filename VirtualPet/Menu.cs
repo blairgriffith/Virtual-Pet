@@ -12,6 +12,7 @@ namespace OrganicPet
         
         Shelter shelter = new Shelter();
 
+
         public void GameplayMenu()
         {
             Console.WriteLine("Welcome to Virtual Pet!!\n");
@@ -19,6 +20,9 @@ namespace OrganicPet
             {
                 OrganicPet organicPet = new OrganicPet();
                 RobotPet robotPet = new RobotPet();
+
+                shelter.Tick();
+
                 Console.WriteLine("\nPlease type one of the following menu options:\n" +
                     "\nAdd Pet - add a new pet to the shelter\n" +
                     "\nPet Status - displays all pets' names species and stats\n" +
@@ -28,6 +32,7 @@ namespace OrganicPet
                     "\n    Take all to Doctor - same as above for all pets\n" +
                     "\nExercise -increasing health, decreasing boredom, and increasing hunger\n" +
                     "\n    Exercise All - same as above for all pets\n" +
+                    "\nAdopt - Remove a selected pet from the shelter\n" +
                     "\nExit - exits the game\n");
 
                 response = Console.ReadLine().ToLower();
@@ -119,6 +124,19 @@ namespace OrganicPet
                                 break;
                             case "organic":
                                 organicPet.ExerciseAll(shelter);
+                                break;
+                        }
+                        break;
+                    case "adopt":
+                        switch (pet.ChoosePetType())
+                        {
+                            case "robot":
+                                robotPet = robotPet.ChoosePet(shelter);
+                                shelter.AdoptRobot(robotPet);
+                                break;
+                            case "organic":
+                                organicPet = organicPet.ChoosePet(shelter);
+                                shelter.AdoptOrganic(organicPet);
                                 break;
                         }
                         break;
