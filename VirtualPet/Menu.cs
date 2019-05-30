@@ -50,6 +50,7 @@ namespace OrganicPet
                                 shelter.AddOrganicPetToShelter(organicPet);
                                 break;
                         }
+                        Console.Clear();
                         break;
                     case "pet status":
                         shelter.GetStatusAll();
@@ -67,6 +68,7 @@ namespace OrganicPet
                                 organicPet.FeedPet(organicPet);
                                 break;
                         }
+                        Console.Clear();
                         break;
                     case "feed all":
                         switch (pet.ChoosePetType())
@@ -78,6 +80,7 @@ namespace OrganicPet
                                 organicPet.FeedAll(shelter);
                                 break;
                         }
+                        Console.Clear();
                         break;
                     case "take to doctor":
                         switch (pet.ChoosePetType())
@@ -91,6 +94,7 @@ namespace OrganicPet
                                 organicPet.TakeToDoctor(organicPet);
                                 break;
                         }
+                        Console.Clear();
                         break;
                     case "take all to doctor":
                         switch (pet.ChoosePetType())
@@ -102,6 +106,7 @@ namespace OrganicPet
                                 organicPet.TakeToDoctorAll(shelter);
                                 break;
                         }
+                        Console.Clear();
                         break;
                     case "exercise":
                         switch (pet.ChoosePetType())
@@ -115,6 +120,7 @@ namespace OrganicPet
                                 organicPet.Exercise(organicPet);
                                 break;
                         }
+                        Console.Clear();
                         break;
                     case "exercise all":
                         switch (pet.ChoosePetType())
@@ -126,6 +132,7 @@ namespace OrganicPet
                                 organicPet.ExerciseAll(shelter);
                                 break;
                         }
+                        Console.Clear();
                         break;
                     case "adopt":
                         switch (pet.ChoosePetType())
@@ -139,6 +146,7 @@ namespace OrganicPet
                                 shelter.AdoptOrganic(organicPet);
                                 break;
                         }
+                        Console.Clear();
                         break;
                     case "exit":
                         playingGame = false;
@@ -147,7 +155,7 @@ namespace OrganicPet
                         Console.WriteLine("command not recognized");
                         break;
                 }
-                Console.Clear();
+                
             } while (playingGame);
 
         }
