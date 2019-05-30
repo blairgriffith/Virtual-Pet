@@ -15,7 +15,14 @@ namespace OrganicPet
             Hunger = 7;
             Health = 6;
         }
-
+        public OrganicPet AddPet()
+        {
+            Console.WriteLine("Let's name the new pet in your shelter. What would you like to name your pet?");
+            (this.Name) = Console.ReadLine();
+            Console.WriteLine($"{this.Name} is a great name! What species is {this.Name}?");
+            this.Species = Console.ReadLine();
+            return this;
+        }
         public OrganicPet ChoosePet(Shelter shelter)
         {
             int i = 0;
@@ -51,18 +58,18 @@ namespace OrganicPet
         }
         
         //all organic pet methods
-        public void FeedAll()
+        public void FeedAll(Shelter shelter)
         {
             foreach (var pet in shelter.listOfOrganicPets)
                 pet.Hunger--;
 
         }
-        public void TakeToDoctorAll()
+        public void TakeToDoctorAll(Shelter shelter)
         {
             foreach (var pet in shelter.listOfOrganicPets)
                 pet.Health++;
         }
-        public void ExerciseAll()
+        public void ExerciseAll(Shelter shelter)
         {
             foreach (var pet in shelter.listOfOrganicPets)
             {
@@ -71,10 +78,6 @@ namespace OrganicPet
                 pet.Boredom--;
             }
         }
-        public void GetInfoAll()
-        {
-            foreach (var pet in shelter.listOfOrganicPets)
-                Console.WriteLine($"Your {pet.Species} is named {pet.Name}");
-        }
+       
     }
 }

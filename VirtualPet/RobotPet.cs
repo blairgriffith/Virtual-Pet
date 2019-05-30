@@ -9,14 +9,22 @@ namespace OrganicPet
     {
         public int Oil { get; set; }
         public int Performance { get; set; }
-        Shelter shelter = new Shelter();
+       
 
         public RobotPet() : base("", "")
         {
             Oil = 9;
             Performance = 10;
         }
-
+        public RobotPet AddPet()
+        {
+           
+            Console.WriteLine("Let's name the new pet in your shelter. What would you like to name your pet?");
+            (this.Name) = Console.ReadLine();
+            Console.WriteLine($"{this.Name} is a great name! What species is {this.Name}?");
+            this.Species = Console.ReadLine();
+            return this;
+        }
         public RobotPet ChoosePet(Shelter shelter)
         {
             int i = 0;
@@ -52,18 +60,18 @@ namespace OrganicPet
         }
 
         //all robot pet methods
-        public void FeedAll()
+        public void FeedAll(Shelter shelter)
         {
             foreach (var pet in shelter.listOfRobotPets)
                 pet.Oil--;
 
         }
-        public void TakeToDoctorAll()
+        public void TakeToDoctorAll(Shelter shelter)
         {
             foreach (var pet in shelter.listOfRobotPets)
                 pet.Performance++;
         }
-        public void ExerciseAll()
+        public void ExerciseAll(Shelter shelter)
         {
             foreach (var pet in shelter.listOfRobotPets)
             {
@@ -72,11 +80,5 @@ namespace OrganicPet
                 pet.Boredom--;
             }
         }
-        public void GetInfoAll()
-        {
-            foreach (var pet in shelter.listOfRobotPets)
-                Console.WriteLine($"Your {pet.Species} is named {pet.Name}");
-        }
-
-    }
+     }
 }

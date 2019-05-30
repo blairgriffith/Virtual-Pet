@@ -9,8 +9,7 @@ namespace OrganicPet
         string response = "";
         bool playingGame = true;
         Pet pet = new Pet("","");
-        OrganicPet organicPet = new OrganicPet();
-        RobotPet robotPet = new RobotPet();
+        
         Shelter shelter = new Shelter();
 
         public void GameplayMenu()
@@ -18,6 +17,8 @@ namespace OrganicPet
             Console.WriteLine("Welcome to Virtual Pet!!\n");
             do
             {
+                OrganicPet organicPet = new OrganicPet();
+                RobotPet robotPet = new RobotPet();
                 Console.WriteLine("\nPlease type one of the following menu options:\n" +
                     "\nAdd Pet - add a new pet to the shelter\n" +
                     "\nPet Status - displays all pets' names species and stats\n" +
@@ -36,7 +37,7 @@ namespace OrganicPet
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
-                                robotPet.AddPet();
+                                robotPet = robotPet.AddPet();
                                 shelter.AddRobotPetToShelter(robotPet);
                                 break;
                             case "organic":
@@ -66,10 +67,10 @@ namespace OrganicPet
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
-                                robotPet.FeedAll();
+                                robotPet.FeedAll(shelter);
                                 break;
                             case "organic":
-                                organicPet.FeedAll();
+                                organicPet.FeedAll(shelter);
                                 break;
                         }
                         break;
@@ -90,10 +91,10 @@ namespace OrganicPet
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
-                                robotPet.TakeToDoctorAll();
+                                robotPet.TakeToDoctorAll(shelter);
                                 break;
                             case "organic":
-                                organicPet.TakeToDoctorAll();
+                                organicPet.TakeToDoctorAll(shelter);
                                 break;
                         }
                         break;
@@ -114,10 +115,10 @@ namespace OrganicPet
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
-                                robotPet.ExerciseAll();
+                                robotPet.ExerciseAll(shelter);
                                 break;
                             case "organic":
-                                organicPet.ExerciseAll();
+                                organicPet.ExerciseAll(shelter);
                                 break;
                         }
                         break;

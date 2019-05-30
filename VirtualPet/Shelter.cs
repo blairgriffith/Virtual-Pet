@@ -12,7 +12,7 @@ namespace OrganicPet
         public List<RobotPet> listOfRobotPets = new List<RobotPet>();
         int choice;
 
-
+        
         //add pets to appropriate lists
         public void AddOrganicPetToShelter(OrganicPet organicPet)
         {
@@ -27,18 +27,18 @@ namespace OrganicPet
         //methods for all pets
         public void GetStatusAll()
         {
-            Console.WriteLine("|Name        | Hunger/Oil | Boredom  | Health/Performance |");
-            Console.WriteLine("|------------|------------|----------|--------------------|");
+            Console.WriteLine("|Name   |Species     | Hunger/Oil | Boredom  | Health/Performance |");
+            Console.WriteLine("|-------|---------|------------|----------|--------------------|");
 
-            foreach(var pet in listOfOrganicPets)
+            Console.WriteLine("Organic Pets:");
+            foreach (var pet in listOfOrganicPets)
             {
-                Console.WriteLine("Organic Pets:");
-                Console.WriteLine($"| {pet.Name} | {pet.Hunger} | {pet.Boredom} | {pet.Health}|");
+                Console.WriteLine($"| {pet.Name} |{pet.Species} | {pet.Hunger} | {pet.Boredom} | {pet.Health}|");
             }
+            Console.WriteLine("Robot Pets:");
             foreach (var pet in listOfRobotPets)
             {
-                Console.WriteLine("Robot Pets:");
-                Console.WriteLine($"| {pet.Name} | {pet.Oil} | {pet.Boredom} | {pet.Performance}|");
+                Console.WriteLine($"| {pet.Name} |{pet.Species} | {pet.Oil} | {pet.Boredom} | {pet.Performance}|");
             }
         }
 
