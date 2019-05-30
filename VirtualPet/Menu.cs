@@ -147,6 +147,7 @@ namespace OrganicPet
                         Console.WriteLine("command not recognized");
                         break;
                 }
+                Console.Clear();
             } while (playingGame);
 
         }
