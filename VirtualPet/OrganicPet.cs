@@ -15,29 +15,72 @@ namespace OrganicPet
             Hunger = 7;
             Health = 6;
         }
-        public void FeedPet()
+
+        public OrganicPet ChoosePet()
         {
-            shelter.ChooseOrganicPet();
-            Console.WriteLine($"{shelter.ChooseOrganicPet().Name}'s hunger level is now {shelter.ChooseOrganicPet().Hunger}");
+            int i = 0;
+            foreach (var pet in shelter.listOfOrganicPets)
+            {
+                i = i + 1;
+                Console.WriteLine($"{i}. {pet.Name}");
+            }
+            int choice = Convert.ToInt32(Console.ReadLine());
+            choice--;
+            Console.WriteLine($"You have chosen {shelter.listOfOrganicPets[choice].Name}");
+            return shelter.listOfOrganicPets[choice];
         }
 
-
-        public void TakeToDoctor()
+        //single organic pet methods
+        public override void FeedPet()
         {
-            shelter.ChooseOrganicPet();
-            Console.WriteLine($"{shelter.ChooseOrganicPet().Name}'s health level is now {shelter.ChooseOrganicPet().Health}");
+            ChoosePet();
+
+            ChoosePet().Hunger--;
+            Console.WriteLine($"{ChoosePet().Name}'s hunger level is now {ChoosePet().Hunger}");
         }
-
-
-        public void Exercise()
+        public override void TakeToDoctor()
         {
-            shelter.ChooseOrganicPet();
+            ChoosePet();
 
-            shelter.ChooseOrganicPet().Health++;
-            shelter.ChooseOrganicPet().Hunger++;
-            shelter.ChooseOrganicPet().Boredom--;
-            Console.WriteLine($"{shelter.ChooseOrganicPet().Name} now has {shelter.ChooseOrganicPet().Health} health, {shelter.ChooseOrganicPet().Hunger} hunger," +
-                $" and {shelter.ChooseOrganicPet().Boredom} boredom.");
+            ChoosePet().Health++;
+            Console.WriteLine($"{ChoosePet().Name}'s health level is now {ChoosePet().Health}");
+        }
+        public override void Exercise()
+        {
+            ChoosePet();
+
+            ChoosePet().Health++;
+            ChoosePet().Hunger++;
+            ChoosePet().Boredom--;
+            Console.WriteLine($"{ChoosePet().Name} now has {ChoosePet().Health} health, {ChoosePet().Hunger} hunger," +
+                $" and {ChoosePet().Boredom} boredom.");
+        }
+        
+        //all organic pet methods
+        public void FeedAll()
+        {
+            foreach (var pet in shelter.listOfOrganicPets)
+                pet.Hunger--;
+
+        }
+        public void TakeToDoctorAll()
+        {
+            foreach (var pet in shelter.listOfOrganicPets)
+                pet.Health++;
+        }
+        public void ExerciseAll()
+        {
+            foreach (var pet in shelter.listOfOrganicPets)
+            {
+                pet.Health++;
+                pet.Hunger++;
+                pet.Boredom--;
+            }
+        }
+        public void GetInfoAll()
+        {
+            foreach (var pet in shelter.listOfOrganicPets)
+                Console.WriteLine($"Your {pet.Species} is named {pet.Name}");
         }
     }
 }

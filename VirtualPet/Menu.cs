@@ -8,7 +8,7 @@ namespace OrganicPet
     {
         string response = "";
         bool playingGame = true;
-
+        Pet pet = new Pet("","");
         OrganicPet organicPet = new OrganicPet();
         RobotPet robotPet = new RobotPet();
         Shelter shelter = new Shelter();
@@ -33,31 +33,93 @@ namespace OrganicPet
                 switch (response)
                 {
                     case "add pet":
-                        shelter.AddPetToShelter();
+                        pet.ChoosePetType();
+                        switch (pet.ChoosePetType())
+                        {
+                            case "robot":
+                                robotPet.AddPet();
+                                shelter.AddRobotPetToShelter(robotPet);
+                                break;
+                            case "organic":
+                                organicPet.AddPet();
+                                shelter.AddOrganicPetToShelter(organicPet);
+                                break;
+                        }
                         break;
                     case "pet status":
                         shelter.GetStatusAll();
                         break;
                     case "feed pet":
-                        shelter.ChoosePet();
-                        shelter.FeedPet();
+                        pet.ChoosePetType();
+                        switch (pet.ChoosePetType())
+                        {
+                            case "robot":
+                                robotPet.FeedPet();
+                                break;
+                            case "organic":
+                                organicPet.FeedPet();
+                                break;
+                        }
                         break;
                     case "feed all":
-                        shelter.FeedAll();
+                        pet.ChoosePetType();
+                        switch (pet.ChoosePetType())
+                        {
+                            case "robot":
+                                robotPet.FeedAll();
+                                break;
+                            case "organic":
+                                organicPet.FeedAll();
+                                break;
+                        }
                         break;
                     case "take to doctor":
-                        shelter.ChoosePet();
-                        shelter.TakeToDoctor();
+                        pet.ChoosePetType();
+                        switch (pet.ChoosePetType())
+                        {
+                            case "robot":
+                                robotPet.TakeToDoctor();
+                                break;
+                            case "organic":
+                                organicPet.TakeToDoctor();
+                                break;
+                        }
                         break;
                     case "take all to doctor":
-                        shelter.TakeToDoctorAll();
+                        pet.ChoosePetType();
+                        switch (pet.ChoosePetType())
+                        {
+                            case "robot":
+                                robotPet.TakeToDoctorAll();
+                                break;
+                            case "organic":
+                                organicPet.TakeToDoctorAll();
+                                break;
+                        }
                         break;
                     case "exercise":
-                        shelter.ChoosePet();
-                        shelter.Exercise();
+                        pet.ChoosePetType();
+                        switch (pet.ChoosePetType())
+                        {
+                            case "robot":
+                                robotPet.Exercise();
+                                break;
+                            case "organic":
+                                organicPet.Exercise();
+                                break;
+                        }
                         break;
                     case "exercise all":
-                        shelter.ExerciseAll();
+                        pet.ChoosePetType();
+                        switch (pet.ChoosePetType())
+                        {
+                            case "robot":
+                                robotPet.ExerciseAll();
+                                break;
+                            case "organic":
+                                organicPet.ExerciseAll();
+                                break;
+                        }
                         break;
                     case "exit":
                         playingGame = false;
