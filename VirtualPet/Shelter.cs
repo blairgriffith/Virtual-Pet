@@ -13,6 +13,7 @@ namespace OrganicPet
         public List<RobotPet> listOfRobotPets = new List<RobotPet>();
         int choice;
 
+
         //add pets to appropriate lists
         public void AddOrganicPetToShelter()
         {
@@ -26,6 +27,13 @@ namespace OrganicPet
         }
 
         //methods to choose pet from specific list
+        public string ChoosePetType()
+        {
+            //Make switch case with default...later
+            Console.WriteLine("Choose a pet type: Robot or Organic");
+            return Console.ReadLine();
+
+        }
         public OrganicPet ChooseOrganicPet()
         {
             int i = 0;
@@ -97,40 +105,15 @@ namespace OrganicPet
         }
 
         //robot pet methods
-        public void OilAll()
-        {
-            foreach (var pet in listOfOrganicPets)
-                pet.Oil--;
-
-        }
-        public void TakeToMechanicAll()
-        {
-            foreach (var pet in listOfOrganicPets)
-                pet.Performance++;
-        }
-        public void PilotAll()
-        {
-            foreach (var pet in listOfOrganicPets)
-            {
-                pet.Peformance++;
-                pet.Oil++;
-                pet.Boredom--;
-            }
-        }
-        public void GetInfoAll()
-        {
-            foreach (var pet in listOfOrganicPets)
-                Console.WriteLine($"Your {pet.Species} is named {pet.Name}");
-        }
         // methods for single pet
         public void GetInfo()
         {
-            Console.WriteLine($"Your {listOfPets[choice].Species} is named {listOfPets[choice].Name}");
+            Console.WriteLine($"Your {listOfOrganicPets[choice].Species} is named {listOfOrganicPets[choice].Name}");
         }
         public void GetStatus()
         {
-            Console.WriteLine($"{listOfPets[choice].Name} has {listOfPets[choice].Hunger} hunger, {listOfPets[choice].Boredom} boredom, " +
-                $"and {listOfPets[choice].Health} health.");
+            Console.WriteLine($"{listOfOrganicPets[choice].Name} has {listOfOrganicPets[choice].Hunger} hunger, {listOfOrganicPets[choice].Boredom} boredom, " +
+                $"and {listOfOrganicPets[choice].Health} health.");
         }
     }
 

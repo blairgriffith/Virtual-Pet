@@ -10,10 +10,10 @@ namespace OrganicPet
         public int Health { get; set; }
         Shelter shelter = new Shelter();
 
-        public OrganicPet(int hunger, int health) : base("", "")
+        public OrganicPet() : base("", "")
         {
-            Hunger = hunger;
-            Health = health;
+            Hunger = 7;
+            Health = 6;
         }
         public void FeedPet()
         {
