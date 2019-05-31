@@ -60,25 +60,25 @@ namespace OrganicPet
         }
 
         //all robot pet methods
-        public void FeedAll(Shelter shelter)
-        {
-            foreach (var pet in shelter.listOfRobotPets)
-                pet.Oil--;
+        //public void FeedAll(Shelter shelter)
+        //{
+        //    foreach (var pet in shelter.listOfRobotPets)
+        //        pet.Oil--;
 
-        }
-        public void TakeToDoctorAll(Shelter shelter)
-        {
-            foreach (var pet in shelter.listOfRobotPets)
-                pet.Performance++;
-        }
-        public void ExerciseAll(Shelter shelter)
-        {
-            foreach (var pet in shelter.listOfRobotPets)
-            {
-                pet.Performance++;
-                pet.Oil++;
-                pet.Boredom--;
-            }
-        }
+        //}
+        //public void TakeToDoctorAll(Shelter shelter)
+        //{
+        //    foreach (var pet in shelter.listOfRobotPets)
+        //        pet.Performance++;
+        //}
+        //public void ExerciseAll(Shelter shelter)
+        //{
+        //    foreach (var pet in shelter.listOfRobotPets)
+        //    {
+        //        pet.Performance++;
+        //        pet.Oil++;
+        //        pet.Boredom--;
+        //    }
+        //}
      }
 }

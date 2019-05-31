@@ -57,27 +57,31 @@ namespace OrganicPet
                 $" and {organicPet.Boredom} boredom.");
         }
         
-        //all organic pet methods
-        public void FeedAll(Shelter shelter)
-        {
-            foreach (var pet in shelter.listOfOrganicPets)
-                pet.Hunger--;
+        // To eliminate redundancy methods that apply to all pets were moved to 
+        // the shelter class, where there is easy access to all pets through
+        // the shelter lists
 
-        }
-        public void TakeToDoctorAll(Shelter shelter)
-        {
-            foreach (var pet in shelter.listOfOrganicPets)
-                pet.Health++;
-        }
-        public void ExerciseAll(Shelter shelter)
-        {
-            foreach (var pet in shelter.listOfOrganicPets)
-            {
-                pet.Health++;
-                pet.Hunger++;
-                pet.Boredom--;
-            }
-        }
+        //all organic pet methods
+        //public void FeedAll(Shelter shelter)
+        //{
+        //    foreach (var pet in shelter.listOfOrganicPets)
+        //        pet.Hunger--;
+
+        //}
+        //public void TakeToDoctorAll(Shelter shelter)
+        //{
+        //    foreach (var pet in shelter.listOfOrganicPets)
+        //        pet.Health++;
+        //}
+        //public void ExerciseAll(Shelter shelter)
+        //{
+        //    foreach (var pet in shelter.listOfOrganicPets)
+        //    {
+        //        pet.Health++;
+        //        pet.Hunger++;
+        //        pet.Boredom--;
+        //    }
+        //}
        
     }
 }

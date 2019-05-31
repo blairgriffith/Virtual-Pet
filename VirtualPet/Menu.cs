@@ -77,16 +77,17 @@ namespace OrganicPet
                         Console.Clear();
                         break;
                     case "feed all":
-                        switch (pet.ChoosePetType())
-                        {
-                            case "robot":
-                                robotPet.FeedAll(shelter);
-                                break;
-                            case "organic":
-                                organicPet.FeedAll(shelter);
-                                break;
-                        }
+                        //switch (pet.ChoosePetType())
+                        //{
+                        //    case "robot":
+                        //        robotPet.FeedAll(shelter);
+                        //        break;
+                        //    case "organic":
+                        //        organicPet.FeedAll(shelter);
+                        //        break;
+                        //}
                         Console.Clear();
+                        shelter.FeedAll();
                         break;
                     case "take to doctor":
                         switch (pet.ChoosePetType())
@@ -103,16 +104,17 @@ namespace OrganicPet
                         Console.Clear();
                         break;
                     case "take all to doctor":
-                        switch (pet.ChoosePetType())
-                        {
-                            case "robot":
-                                robotPet.TakeToDoctorAll(shelter);
-                                break;
-                            case "organic":
-                                organicPet.TakeToDoctorAll(shelter);
-                                break;
-                        }
+                        //switch (pet.ChoosePetType())
+                        //{
+                        //    case "robot":
+                        //        robotPet.TakeToDoctorAll(shelter);
+                        //        break;
+                        //    case "organic":
+                        //        organicPet.TakeToDoctorAll(shelter);
+                        //        break;
+                        //}
                         Console.Clear();
+                        shelter.TakeToDoctorAll();
                         break;
                     case "exercise":
                         switch (pet.ChoosePetType())
@@ -129,16 +131,17 @@ namespace OrganicPet
                         Console.Clear();
                         break;
                     case "exercise all":
-                        switch (pet.ChoosePetType())
-                        {
-                            case "robot":
-                                robotPet.ExerciseAll(shelter);
-                                break;
-                            case "organic":
-                                organicPet.ExerciseAll(shelter);
-                                break;
-                        }
+                        //switch (pet.ChoosePetType())
+                        //{
+                        //    case "robot":
+                        //        robotPet.ExerciseAll(shelter);
+                        //        break;
+                        //    case "organic":
+                        //        organicPet.ExerciseAll(shelter);
+                        //        break;
+                        //}
                         Console.Clear();
+                        shelter.ExerciseAll();
                         break;
                     case "adopt":
                         switch (pet.ChoosePetType())

@@ -63,6 +63,57 @@ namespace OrganicPet
         {
             listOfRobotPets.Remove(robotPet);
         }
-        
+
+        // FeedAll method moved from the RobotPet and OrganicPet classes
+        public void FeedAll()
+        {
+            foreach (var pet in this.listOfOrganicPets)
+            {
+                pet.Hunger--;
+                Console.WriteLine($"{pet.Name} was fed kibble.");
+            }
+
+            foreach (var pet in this.listOfRobotPets)
+            {
+                pet.Oil--;
+                Console.WriteLine($"{pet.Name} was given oil.");
+            }
+        }
+
+        public void TakeToDoctorAll()
+        {
+            foreach (var pet in this.listOfOrganicPets)
+            {
+                pet.Health++;
+                Console.WriteLine($"{pet.Name} was taken to the doctor.");
+            }
+
+            foreach (var pet in this.listOfRobotPets)
+            {
+                pet.Performance++;
+                Console.WriteLine($"{pet.Name} was taken in for maintenance.");
+            }
+        }
+
+        public void ExerciseAll()
+        {
+            foreach (var pet in this.listOfOrganicPets)
+            {
+                pet.Health++;
+                pet.Hunger++;
+                pet.Boredom--;
+                Console.WriteLine($"{pet.Name} was taken out for exercise.");
+
+            }
+
+            foreach (var pet in this.listOfRobotPets)
+            {
+                pet.Performance++;
+                pet.Oil++;
+                pet.Boredom--;
+                Console.WriteLine($"{pet.Name} was taken out for exercise.");
+
+            }
+        }
     }
 }
