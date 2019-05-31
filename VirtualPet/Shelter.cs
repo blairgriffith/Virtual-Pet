@@ -25,18 +25,17 @@ namespace OrganicPet
         //methods for all pets
         public void GetStatusAll()
         {
-            Console.WriteLine("|Name   |Species     | Hunger/Oil | Boredom  | Health/Performance |");
-            Console.WriteLine("|-------|---------|------------|----------|--------------------|");
+            Console.WriteLine("\n| Name | Species | Hunger/Oil | Boredom | Health/Performance |\n");
 
-            Console.WriteLine("Organic Pets:");
+            Console.WriteLine("Organic Pets:\n");
             foreach (var pet in listOfOrganicPets)
             {
-                Console.WriteLine($"| {pet.Name} |{pet.Species} | {pet.Hunger} | {pet.Boredom} | {pet.Health}|");
+                Console.WriteLine($"|  {pet.Name}  |  {pet.Species}  |  {pet.Hunger}  |  {pet.Boredom}  |  {pet.Health}  |");
             }
-            Console.WriteLine("Robot Pets:");
+            Console.WriteLine("\nRobot Pets:\n");
             foreach (var pet in listOfRobotPets)
             {
-                Console.WriteLine($"| {pet.Name} |{pet.Species} | {pet.Oil} | {pet.Boredom} | {pet.Performance}|");
+                Console.WriteLine($"|  {pet.Name}  |  {pet.Species}  |  {pet.Oil}  |  {pet.Boredom}  |  {pet.Performance}  |");
             }
         }
 
