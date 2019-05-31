@@ -42,7 +42,7 @@ namespace OrganicPet
         //single robot pet methods
         public void FeedPet(RobotPet robotPet)
         {
-            robotPet.Oil++;
+            robotPet.Oil--;
             Console.WriteLine($"{robotPet.Name}'s oil level is now {robotPet.Oil}");
         }
         public void TakeToDoctor(RobotPet robotPet)
