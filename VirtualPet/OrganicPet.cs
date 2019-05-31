@@ -15,14 +15,14 @@ namespace OrganicPet
             Hunger = 7;
             Health = 6;
         }
-        public OrganicPet AddPet()
-        {
-            Console.WriteLine("Let's name the new pet in your shelter. What would you like to name your pet?");
-            (this.Name) = Console.ReadLine();
-            Console.WriteLine($"{this.Name} is a great name! What species is {this.Name}?");
-            this.Species = Console.ReadLine();
-            return this;
-        }
+        //public OrganicPet AddPet()
+        //{
+        //    Console.WriteLine("Let's name the new pet in your shelter. What would you like to name your pet?");
+        //    (this.Name) = Console.ReadLine();
+        //    Console.WriteLine($"{this.Name} is a great name! What species is {this.Name}?");
+        //    this.Species = Console.ReadLine();
+        //    return this;
+        //}
         public OrganicPet ChoosePet(Shelter shelter)
         {
             int i = 0;

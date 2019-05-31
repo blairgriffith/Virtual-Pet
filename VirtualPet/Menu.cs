@@ -42,7 +42,13 @@ namespace OrganicPet
                         switch (pet.ChoosePetType())
                         {
                             case "robot":
-                                robotPet = robotPet.AddPet();
+                                // Add Pet now exists in the base class
+                                // and does not return anything.
+                                // robotPet already existed, you just changed   
+                                // the properties with your AddPet method.
+                                // You can simply send the robotPet object as
+                                // a parameter to your AddToShelter method
+                                robotPet.AddPet();
                                 shelter.AddRobotPetToShelter(robotPet);
                                 break;
                             case "organic":
